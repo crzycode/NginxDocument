@@ -1,0 +1,14 @@
+server {
+    listen 80;
+    server_name example.com;
+
+    location /project1/ {
+        proxy_pass http://localhost:4200/;
+    }
+
+    location /project2/ {
+        proxy_pass http://localhost:4200/;
+    }
+
+    # Add more location blocks for other projects as needed
+}
